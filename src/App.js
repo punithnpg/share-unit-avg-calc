@@ -14,8 +14,8 @@ function App() {
 
   const calculateShare = () => {
     const resultsArray = [];
-    const startPrice = parseInt(desiredAveragePrice) - rangePrice;
-    const endPrice = parseInt(desiredAveragePrice) + rangePrice;
+    const startPrice = parseFloat(desiredAveragePrice) - rangePrice;
+    const endPrice = parseFloat(desiredAveragePrice) + rangePrice;
     for (let price = startPrice; price <= endPrice; price = price + step) {
       const totalFirstBuyCost = firstBuyUnits * firstBuyPrice;
 
@@ -29,8 +29,8 @@ function App() {
       const totalCost = totalFirstBuyCost + costSecondTime;
 
       resultsArray.push({
-        averagePrice: newAveragePrice,
-        unitsToBuySecondTime: additionalUnits.toFixed(2),
+        averagePrice: newAveragePrice.toFixed(2),
+        unitsToBuySecondTime: parseInt(additionalUnits),
         costToBuySecondTime: costSecondTime.toFixed(2),
         totalBuyCost: totalCost.toFixed(2),
       });
