@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/share-unit-avg-calc/static/css/main.4aef1f31.css",
-    "main.js": "/share-unit-avg-calc/static/js/main.a2caf923.js",
+    "main.js": "/share-unit-avg-calc/static/js/main.48b74cb5.js",
     "static/js/787.8f960eb8.chunk.js": "/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js",
     "index.html": "/share-unit-avg-calc/index.html",
     "main.4aef1f31.css.map": "/share-unit-avg-calc/static/css/main.4aef1f31.css.map",
-    "main.a2caf923.js.map": "/share-unit-avg-calc/static/js/main.a2caf923.js.map",
+    "main.48b74cb5.js.map": "/share-unit-avg-calc/static/js/main.48b74cb5.js.map",
     "787.8f960eb8.chunk.js.map": "/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4aef1f31.css",
-    "static/js/main.a2caf923.js"
+    "static/js/main.48b74cb5.js"
   ]
 }
