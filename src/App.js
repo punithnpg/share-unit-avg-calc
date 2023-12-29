@@ -32,6 +32,7 @@ function App() {
         averagePrice: newAveragePrice.toFixed(2),
         unitsToBuySecondTime: parseInt(additionalUnits),
         costToBuySecondTime: costSecondTime.toFixed(2),
+        costToBuyFirstTime: totalFirstBuyCost.toFixed(2),
         totalBuyCost: totalCost.toFixed(2),
       });
 
@@ -39,6 +40,16 @@ function App() {
     }
   };
 
+  const handleReset = ()=>{
+    setFirstBuyUnits(0);
+    setFirstBuyPrice(0);
+    setCurrentPrice(0)
+    setStep(0.25)
+    setRangePrice(0.5)
+    setDesiredAveragePrice(0)
+    setResults([])
+  }
+  
   return (
     <div className="container">
       <h2>Avg Unit Calculator</h2>
@@ -89,8 +100,8 @@ function App() {
         </div>
         <div className="input-field">
           <label>
-            Range Price: (How much to increase/ descrease for each step){" "}
-          </label>
+            Range Price:      
+            </label>
           <input
             type="number"
             value={rangePrice}
@@ -98,15 +109,19 @@ function App() {
           />
         </div>
       </div>
+      <div className="input-field">
       <button onClick={calculateShare}>Calculate</button>
-      <div>
+      <button onClick={handleReset} className="reset">Reset </button>
+      </div>
+      {results.length>0 && <div>
         <h3>Results:</h3>
         <table>
           <thead>
             <tr>
               <th>Average Price</th>
               <th>No of Units to Buy</th>
-              <th>Cost to Buy</th>
+              <th>Cost to Buy New Units</th>
+              <th>Old Unit Value</th>
               <th>Total Value</th>
             </tr>
           </thead>
@@ -114,14 +129,16 @@ function App() {
             {results.map((result, index) => (
               <tr key={index}>
                 <td>{result.averagePrice}</td>
-                <td>{result.unitsToBuySecondTime}</td>
+                <td><b>{result.unitsToBuySecondTime}</b></td>
                 <td>Rs {result.costToBuySecondTime}</td>
+                <td>Rs {result.costToBuyFirstTime}</td>
                 <td>Rs {result.totalBuyCost}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+        }
     </div>
   );
 }
