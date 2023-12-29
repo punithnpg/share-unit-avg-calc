@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/punithnpg/share-unit-avg-calc/static/css/main.4aef1f31.css",
-    "main.js": "/punithnpg/share-unit-avg-calc/static/js/main.012ccf30.js",
-    "static/js/787.8f960eb8.chunk.js": "/punithnpg/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js",
-    "index.html": "/punithnpg/share-unit-avg-calc/index.html",
-    "main.4aef1f31.css.map": "/punithnpg/share-unit-avg-calc/static/css/main.4aef1f31.css.map",
-    "main.012ccf30.js.map": "/punithnpg/share-unit-avg-calc/static/js/main.012ccf30.js.map",
-    "787.8f960eb8.chunk.js.map": "/punithnpg/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js.map"
+    "main.css": "/github.io/share-unit-avg-calc/static/css/main.4aef1f31.css",
+    "main.js": "/github.io/share-unit-avg-calc/static/js/main.318364d7.js",
+    "static/js/787.8f960eb8.chunk.js": "/github.io/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js",
+    "index.html": "/github.io/share-unit-avg-calc/index.html",
+    "main.4aef1f31.css.map": "/github.io/share-unit-avg-calc/static/css/main.4aef1f31.css.map",
+    "main.318364d7.js.map": "/github.io/share-unit-avg-calc/static/js/main.318364d7.js.map",
+    "787.8f960eb8.chunk.js.map": "/github.io/share-unit-avg-calc/static/js/787.8f960eb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4aef1f31.css",
-    "static/js/main.012ccf30.js"
+    "static/js/main.318364d7.js"
   ]
 }
