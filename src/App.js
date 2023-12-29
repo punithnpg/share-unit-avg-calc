@@ -24,16 +24,15 @@ function App() {
         (price - currentPrice);
 
       const newAveragePrice = price;
-      const costSecondTime = additionalUnits * price;
-
+      const costSecondTime = (parseInt(additionalUnits)* currentPrice);
       const totalCost = totalFirstBuyCost + costSecondTime;
 
       resultsArray.push({
         averagePrice: newAveragePrice.toFixed(2),
         unitsToBuySecondTime: parseInt(additionalUnits),
-        costToBuySecondTime: costSecondTime.toFixed(2),
-        costToBuyFirstTime: totalFirstBuyCost.toFixed(2),
-        totalBuyCost: totalCost.toFixed(2),
+        costToBuySecondTime: costSecondTime,
+        costToBuyFirstTime: parseFloat(totalFirstBuyCost).toFixed(2),
+        totalBuyCost: parseFloat(totalCost).toFixed(2),
       });
 
       setResults(resultsArray);
@@ -49,6 +48,13 @@ function App() {
     setDesiredAveragePrice(0)
     setResults([])
   }
+
+  const formatToINR = (value) => {
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(value);
+  };
   
   return (
     <div className="container">
@@ -130,9 +136,9 @@ function App() {
               <tr key={index}>
                 <td>{result.averagePrice}</td>
                 <td><b>{result.unitsToBuySecondTime}</b></td>
-                <td>Rs {result.costToBuySecondTime}</td>
-                <td>Rs {result.costToBuyFirstTime}</td>
-                <td>Rs {result.totalBuyCost}</td>
+                <td>{formatToINR(result.costToBuySecondTime)}</td>
+                <td>{formatToINR(result.costToBuyFirstTime)}</td>
+                <td>{formatToINR(result.totalBuyCost)}</td>
               </tr>
             ))}
           </tbody>
